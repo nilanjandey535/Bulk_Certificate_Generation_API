@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: #fffdf8;
+            color: #252525;
+        }
+
+        .certificate {
+            box-sizing: border-box;
+            width: 297mm;
+            height: 210mm;
+            padding: 14mm;
+            text-align: center;
+        }
+
+        .outer-border {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border: 4px double #b39450;
+            padding: 9mm;
+        }
+
+        .inner-border {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d6c28b;
+            padding: 10mm 8mm;
+        }
+
+        .organization {
+            color: #8b7137;
+            font-size: 15px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 12px 0;
+            font-size: 37px;
+            letter-spacing: 4px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #666;
+        }
+
+        .recipient {
+            margin: 18px 0;
+            font-size: 33px;
+            color: #9b7830;
+        }
+
+        .course {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .details {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .footer {
+            margin-top: 28px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="outer-border">
+            <div class="inner-border">
+                <div class="organization">
+                    {{ organization_name }}
+                </div>
+
+                <h1>CERTIFICATE</h1>
+
+                <div class="subtitle">
+                    OF ACHIEVEMENT
+                </div>
+
+                <p>This certificate is proudly presented to</p>
+
+                <div class="recipient">
+                    {{ recipient_name }}
+                </div>
+
+                <p>for successfully completing</p>
+
+                <div class="course">
+                    {{ course_name }}
+                </div>
+
+                <div class="details">
+                    Completion Date: {{ completion_date }}
+                </div>
+
+                <div class="footer">
+                    Certificate ID: {{ certificate_id }}
+                    <br><br>
+                    Authorized Signature: ____________________
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
